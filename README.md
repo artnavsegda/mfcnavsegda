@@ -1,0 +1,2 @@
+# mfcnavsegda
+MFC playground projects
