@@ -1,7 +1,10 @@
+CPPFLAGS = /AM /O1 /F 1000
+LFLAGS = /ALIGN:4 /NOD /ONERROR:NOEXE mafxcw mlibcew libw shell commdlg
+
 all: helloapp.exe
 
 helloapp.exe: helloapp.cpp helloapp.def
-	cl /AM /O1 /F 1000 helloapp.def helloapp.cpp /link /ALIGN:4 /NOD /ONERROR:NOEXE mafxcw mlibcew libw shell commdlg
+	cl $(CPPFLAGS) helloapp.def helloapp.cpp /link $(LFLAGS)
 
 clean:
 	-del *.exe
