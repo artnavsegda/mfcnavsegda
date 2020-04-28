@@ -1,0 +1,15 @@
+CPPFLAGS = /GX /Gy /MT /D_MBCS /D_X86_
+LFLAGS = /incremental:no /debug:none /subsystem:windows
+
+all: mfcogl.exe
+
+mfcogl.exe: mfcogl.obj mfcglvw.obj mfcgldoc.obj mainfrm.obj mfcogl.res
+	link $(LFLAGS) $** glu32.lib opengl32.lib
+
+clean:
+	-del *.exe
+	-del *.map
+	-del *.obj
+	-del *.bsc
+	-del *.res
+	-del *.pdb
