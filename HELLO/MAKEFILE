@@ -12,3 +12,4 @@ clean:
 	-del *.obj
 	-del *.bsc
 	-del *.res
+	-del *.pdb
