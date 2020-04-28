@@ -16,6 +16,7 @@ ResourceCount=3
 Resource1="ABOUTBOX"
 Resource2="MAINACCELTABLE"
 Resource3="MAINMENU"
+LastPage=3
 
 [CLS:CMainWindow]
 Type=0
