@@ -1,7 +1,7 @@
 # Microsoft Visual C++ generated build script - Do not modify
 
 PROJ = HELLO
-DEBUG = 1
+DEBUG = 0
 PROGTYPE = 0
 CALLER = 
 ARGS = 
@@ -16,11 +16,11 @@ CC = cl
 CPP = cl
 CXX = cl
 CCREATEPCHFLAG = 
-CPPCREATEPCHFLAG = /YcSTDAFX.H
+CPPCREATEPCHFLAG = 
 CUSEPCHFLAG = 
-CPPUSEPCHFLAG = /YuSTDAFX.H
+CPPUSEPCHFLAG = 
 FIRSTC =             
-FIRSTCPP = STDAFX.CPP  
+FIRSTCPP = HELLO.CPP   
 RC = rc
 CFLAGS_D_WEXE = /nologo /G2 /W3 /Zi /AM /Od /D "_DEBUG" /FR /GA /Fd"HELLO.PDB"
 CFLAGS_R_WEXE = /nologo /W3 /AM /O1 /D "NDEBUG" /FR /GA 
@@ -49,15 +49,10 @@ RCDEFINES = $(R_RCDEFINES)
 !endif
 !if [if exist MSVC.BND del MSVC.BND]
 !endif
-SBRS = STDAFX.SBR \
-		HELLO.SBR
+SBRS = HELLO.SBR
 
 
-STDAFX_DEP = c:\src\ms\library\mfc\hello\stdafx.h
-
-
-HELLO_DEP = c:\src\ms\library\mfc\hello\stdafx.h \
-	c:\src\ms\library\mfc\hello\hello.h
+HELLO_DEP = c:\src\ms\library\mfc\hello\hello.h
 
 
 HELLO_RCDEP = c:\src\ms\library\mfc\hello\hello.ico
@@ -65,11 +60,8 @@ HELLO_RCDEP = c:\src\ms\library\mfc\hello\hello.ico
 
 all:	$(PROJ).EXE $(PROJ).BSC
 
-STDAFX.OBJ:	STDAFX.CPP $(STDAFX_DEP)
-	$(CPP) $(CFLAGS) $(CPPCREATEPCHFLAG) /c STDAFX.CPP
-
 HELLO.OBJ:	HELLO.CPP $(HELLO_DEP)
-	$(CPP) $(CFLAGS) $(CPPUSEPCHFLAG) /c HELLO.CPP
+	$(CPP) $(CFLAGS) $(CPPCREATEPCHFLAG) /c HELLO.CPP
 
 HELLO.RES:	HELLO.RC $(HELLO_RCDEP)
 	$(RC) $(RCFLAGS) $(RCDEFINES) -r HELLO.RC
@@ -77,9 +69,8 @@ HELLO.RES:	HELLO.RC $(HELLO_RCDEP)
 
 $(PROJ).EXE::	HELLO.RES
 
-$(PROJ).EXE::	STDAFX.OBJ HELLO.OBJ $(OBJS_EXT) $(DEFFILE)
+$(PROJ).EXE::	HELLO.OBJ $(OBJS_EXT) $(DEFFILE)
 	echo >NUL @<<$(PROJ).CRF
-STDAFX.OBJ +
 HELLO.OBJ +
 $(OBJS_EXT)
 $(PROJ).EXE

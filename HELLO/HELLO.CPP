@@ -14,9 +14,8 @@
 // See these sources for detailed information regarding the
 // Microsoft Foundation Classes product.
 
-#include "stdafx.h"
+#include <afxwin.h>
 #include "resource.h"
-
 #include "hello.h"
 
 /////////////////////////////////////////////////////////////////////////////
