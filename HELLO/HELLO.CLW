@@ -13,9 +13,9 @@ ClassCount=1
 Class1=CMainWindow
 
 ResourceCount=3
-Resource1="MAINMENU"
+Resource1="ABOUTBOX"
 Resource2="MAINACCELTABLE"
-Resource3="ABOUTBOX"
+Resource3="MAINMENU"
 
 [CLS:CMainWindow]
 Type=0
@@ -25,9 +25,9 @@ LastObject=IDM_ABOUT
 
 [MNU:"MAINMENU"]
 Type=1
+Class=?
 Command1=IDM_ABOUT
 CommandCount=1
-Class=?
 
 [ACL:"MAINACCELTABLE"]
 Type=1
@@ -37,11 +37,11 @@ Class=?
 
 [DLG:"ABOUTBOX"]
 Type=1
+Class=?
 ControlCount=5
 Control1=IDC_STATIC,static,1342308353
 Control2=IDC_STATIC,static,1342308353
 Control3=IDC_STATIC,static,1342308353
 Control4=IDC_STATIC,static,1342308353
 Control5=IDOK,button,1342373889
-Class=?
 

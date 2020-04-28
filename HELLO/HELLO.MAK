@@ -1,3 +1,5 @@
+# Microsoft Visual C++ generated build script - Do not modify
+
 PROJ = HELLO
 DEBUG = 1
 PROGTYPE = 0
@@ -8,7 +10,7 @@ D_RCDEFINES = -d_DEBUG
 R_RCDEFINES = -dNDEBUG
 ORIGIN = MSVC
 ORIGIN_VER = 1.00
-PROJPATH = UNKNOWN
+PROJPATH = C:\SRC\MS\LIBRARY\MFC\HELLO\
 USEMFC = 1
 CC = cl
 CPP = cl
@@ -51,6 +53,16 @@ SBRS = STDAFX.SBR \
 		HELLO.SBR
 
 
+STDAFX_DEP = c:\src\ms\library\mfc\hello\stdafx.h
+
+
+HELLO_DEP = c:\src\ms\library\mfc\hello\stdafx.h \
+	c:\src\ms\library\mfc\hello\hello.h
+
+
+HELLO_RCDEP = c:\src\ms\library\mfc\hello\hello.ico
+
+
 all:	$(PROJ).EXE $(PROJ).BSC
 
 STDAFX.OBJ:	STDAFX.CPP $(STDAFX_DEP)
@@ -72,6 +84,8 @@ HELLO.OBJ +
 $(OBJS_EXT)
 $(PROJ).EXE
 $(MAPFILE)
+c:\msvc\lib\+
+c:\msvc\mfc\lib\+
 $(LIBS)
 $(DEFFILE);
 <<
