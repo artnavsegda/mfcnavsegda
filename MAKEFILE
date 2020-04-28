@@ -4,7 +4,7 @@ LFLAGS = /incremental:no /debug:none /subsystem:windows
 all: helloapp.exe
 
 helloapp.exe: helloapp.cpp
-	cl $(CPPFLAGS) $? /link $(LFLAGS)
+	cl $(CPPFLAGS) $** /link $(LFLAGS)
 
 clean:
 	-del *.exe

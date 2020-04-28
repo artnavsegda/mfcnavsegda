@@ -3,8 +3,8 @@ LFLAGS = /incremental:no /debug:none /subsystem:windows
 
 all: hello.exe
 
-hello.exe: hello.cpp
-	cl $(CPPFLAGS) $? /link $(LFLAGS)
+hello.exe: hello.obj hello.res
+	link $(LFLAGS) $**
 
 clean:
 	-del *.exe
