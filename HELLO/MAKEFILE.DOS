@@ -4,7 +4,7 @@ LFLAGS = /ALIGN:4 /NOD /ONERROR:NOEXE mafxcw mlibcew libw shell commdlg
 all: hello.exe
 
 hello.exe: hello.cpp hello.def
-	cl $(CPPFLAGS) $? /link $(LFLAGS)
+	cl $(CPPFLAGS) $** /link $(LFLAGS)
 
 clean:
 	-del *.exe
