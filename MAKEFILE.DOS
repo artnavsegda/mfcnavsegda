@@ -10,3 +10,4 @@ clean:
 	-del *.exe
 	-del *.map
 	-del *.obj
+	-del *.bsc
