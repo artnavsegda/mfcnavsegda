@@ -1,9 +1,9 @@
-CPPFLAGS = /AM /O1 /F 1000
-LFLAGS = /ALIGN:4 /NOD /ONERROR:NOEXE mafxcw mlibcew libw shell commdlg
+CPPFLAGS = /GX /Gy /MT /D_MBCS /D_X86_
+LFLAGS = /incremental:no /debug:none /subsystem:windows
 
 all: hello.exe
 
-hello.exe: hello.cpp hello.def
+hello.exe: hello.cpp
 	cl $(CPPFLAGS) $? /link $(LFLAGS)
 
 clean:

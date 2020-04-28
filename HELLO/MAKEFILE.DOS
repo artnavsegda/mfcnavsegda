@@ -1,0 +1,14 @@
+CPPFLAGS = /AM /O1 /F 1000
+LFLAGS = /ALIGN:4 /NOD /ONERROR:NOEXE mafxcw mlibcew libw shell commdlg
+
+all: hello.exe
+
+hello.exe: hello.cpp hello.def
+	cl $(CPPFLAGS) $? /link $(LFLAGS)
+
+clean:
+	-del *.exe
+	-del *.map
+	-del *.obj
+	-del *.bsc
+	-del *.res
