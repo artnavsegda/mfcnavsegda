@@ -233,7 +233,7 @@ void CMfcOglView::Init()
     gluPerspective(45.0f, fAspect, fNearPlane, fFarPlane);
     glMatrixMode(GL_MODELVIEW);
 	
-    m_nTimerID = SetTimer(1, 50, NULL);
+    m_nTimerID = SetTimer(1, 25, NULL);
 
     ASSERT(m_nTimerID != NULL);
 }
@@ -379,9 +379,9 @@ void CMfcOglView::DrawScene(void)
         glRotatef(AngleY, 0.0f, 1.0f, 0.0f);
         glRotatef(AngleZ, 0.0f, 0.0f, 1.0f);
 
-        AngleX += 1.0f;
-        AngleY += 10.0f;
-        AngleZ += 5.0f;
+        AngleX += 0.5f;
+        AngleY += 5.0f;
+        AngleZ += 2.5f;
 
 		glBegin(GL_QUAD_STRIP);
 			glColor3f(1.0f, 0.0f, 1.0f);
